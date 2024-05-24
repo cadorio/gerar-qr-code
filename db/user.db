@@ -1,0 +1,29 @@
+import sqlite3
+
+# Caminho para a base de dados
+database_path = 'db/users.db'  # A extensão .db é aceitável
+
+# Conectar à base de dados (será criada se não existir)
+conn = sqlite3.connect(database_path)
+
+# Criar um cursor para executar comandos SQL
+cursor = conn.cursor()
+
+# Comando SQL para criar uma tabela de usuários
+create_table_query = '''
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE,
+    password_hash TEXT NOT NULL,
+    auth_token TEXT UNIQUE
+);
+'''
+
+# Executar o comando SQL
+cursor.execute(create_table_query)
+
+# Salvar as mudanças e fechar a conexão com a base de dados
+conn.commit()
+conn.close()
+
+print("A base de dados 'users.db' foi criada com sucesso e a tabela de usuários foi inicializada.")
