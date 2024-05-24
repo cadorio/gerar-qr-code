@@ -8,5 +8,5 @@ Geração do QR Code: O QR Code é gerado usando a biblioteca qrcode. Os dados c
 Execução da Aplicação: Finalmente, a aplicação é executada em modo de depuração.
 Este projeto pode ser útil para situações onde você quer fornecer a cada usuário um meio único e seguro de acessar uma determinada rota (neste caso, a rota de inscrição) através de um QR Code. Por exemplo, isso pode ser usado em um evento onde os participantes podem se inscrever digitalizando o QR Code fornecido. Cada QR Code seria único para cada sessão de usuário, aumentando a segurança.
 ![image](https://github.com/cadorio/gerar-qr-code/assets/35230903/7464470f-8aa8-4889-b026-ae7b15ca486a)
-![Uploading image.png…]()
+
 
